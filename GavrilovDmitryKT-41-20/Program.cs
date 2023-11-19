@@ -1,4 +1,5 @@
 using GavrilovDmitryKT_41_20.Database;
+using GavrilovDmitryKT_41_20.Middlewares;
 using GavrilovDmitryKT_41_20.ServiceExtensions;
 using Microsoft.EntityFrameworkCore;
 using NLog;
@@ -32,6 +33,8 @@ try
         app.UseSwagger();
         app.UseSwaggerUI();
     }
+
+    app.UseMiddleware<ExceptionHandlerMiddleware>();
 
     app.UseAuthorization();
 
