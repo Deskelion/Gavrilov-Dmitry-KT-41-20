@@ -31,15 +31,13 @@ namespace GavrilovDmitryKT_41_20.Interfaces.SubjectInterfaces
         }
 
         public async Task AddSubjectAsync(Subject subject, CancellationToken cancellationToken = default)
-        {
-            
+        {            
             _dbContext.Subjects.Add(subject);
             await _dbContext.SaveChangesAsync();
         }
 
         public async Task UpdateSubjectAsync(Subject subject, CancellationToken cancellationToken = default)
-        {
-            
+        {            
             _dbContext.Subjects.Update(subject);
             await _dbContext.SaveChangesAsync();
         }
