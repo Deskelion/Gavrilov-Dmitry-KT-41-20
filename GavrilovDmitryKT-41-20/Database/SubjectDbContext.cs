@@ -11,7 +11,7 @@ namespace GavrilovDmitryKT_41_20.Database
         {
         }
 
-        DbSet<Subject> Subjects { get; set; }
+        public DbSet<Subject> Subjects { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
